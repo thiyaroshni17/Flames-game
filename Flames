@@ -1,0 +1,58 @@
+from tkinter import*
+a = Tk()
+a.title("flames")
+title1 = Label(a,text="Flames relationship calculator",font=("courier",20,"italic"))
+title1.place(x=450,y=100)
+bg = Photo image(file="bg.png")
+my_label=(a, image = bg)
+my_label.place(x=0,y=0,relwidth=1,relheight=1)
+def b():
+       Name1 = entry1.get()
+       Name2 = entry2.get()
+       Name1 = Name1.lower()
+       Name1 = Name1.lower()
+       Name1 = Name1.replace(" ","")
+       Name2 = Name2.replace(" ","")
+       for i in Name1:
+             for j in Name2:
+                   if i==j:
+                       Name1 = Name1.replace(i,"",1)
+                       Name2 = Name2.replace(j,"",1)
+                       break
+       count=len(Name1+Name2)
+       if count>0:
+           flames =  ["friends","love","affection","marriage","enemies","siblings"]
+           while len(flames)>1:
+                   c = count%len(flames)-1
+                   if c>=0:
+                        d = flames[:c]
+                        e = flames[c+1:]
+                        flames = d+e
+                   else:
+                        flames = flames[:len(flames)-1]
+        msg="The relationship between",entry.get(),"and",entry2.get(),"is",flames[0]
+        result=Label(a,text=msg,font=("courier",15,"italic"))
+        result.place(x=300,y=500)
+
+Name1 = Label(a,text="enter your name",font=("courier",15,"italic"))
+Name1.place(x=400,y=250)
+entry1 = Entry(a,width=50,font=("courier",12,"italic"))
+entry1.place(x=700,y=250,height=30)
+Name2 = Label(a,text="enter your crush name",font=("courier",15,"italic"))
+Name2.place(x=400,y=300)
+entry2=Entry(a,width=50,font=("courier",12,"italic")
+entry2.place(x=700,y=300,height=30)
+button=Button(a,text="find relationship",font=("courier",15,"italic"),command=b)
+button.place(x=600,y=400)
+a.mainloop()
+
+
+
+                         
+
+
+
+
+
+
+
